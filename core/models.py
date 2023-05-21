@@ -21,7 +21,7 @@ class Professor(models.Model):
 class Disciplina(models.Model):
     nome = models.CharField(max_length=100,verbose_name=("nome_disciplina"))
     codigo = models.CharField(max_length=10,unique=True,verbose_name=("codigo_disciplina"))
-    curso = models.ForeignKey(Curso,verbose_name=("Curso_disciplina"),on_delete=models.CASCADE)
+    curso = models.ForeignKey(Curso,verbose_name=("curso_disciplina"),on_delete=models.CASCADE)
     Professores =  models.ManyToManyField('Professor')
     alunos = models.ManyToManyField('Aluno')
     def __str__(self):

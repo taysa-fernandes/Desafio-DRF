@@ -16,7 +16,12 @@ class ProfessorSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Professor
-        fields = ['nome','matricula','id']
+        fields = ['nome','matricula','id','disciplinas']
+        extra_kwargs = {
+            'disciplinas': {
+                'source': 'disciplina_set'
+            }
+        }
 
 class DisciplinaSerializer(serializers.ModelSerializer):
     
