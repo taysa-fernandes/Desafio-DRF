@@ -28,6 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Escola',
+    'DESCRIPTION': 'Sistema de controle de uma escola',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -35,6 +42,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # Application definition
@@ -50,6 +58,8 @@ INSTALLED_APPS = [
     'core',
     'rest_framework',
     'django_filters',
+    'drf_spectacular',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
