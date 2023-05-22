@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Aluno,Professor,Disciplina,Curso
 
 class AlunoSerializer(serializers.ModelSerializer):
-    
+
     class Meta:
         model = Aluno
         fields = ['nome', 'matricula', 'curso','id','disciplinas']
