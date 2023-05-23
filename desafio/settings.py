@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+SWAGGER_SETTINGS = {
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg.inspectors.SwaggerAutoSchema'
+}
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Escola',
     'DESCRIPTION': 'Sistema de controle de uma escola',

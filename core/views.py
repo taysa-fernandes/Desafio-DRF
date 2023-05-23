@@ -113,6 +113,11 @@ class ProfessorViewSet(viewsets.ModelViewSet):
     @swagger_auto_schema(
         method = 'put',
         request_body = None,
+        properties={
+            'Nome': openapi.Schema(type=openapi.TYPE_STRING),
+            'matricula': openapi.Schema(type=openapi.TYPE_INTEGER),
+            'disciplinas': openapi.Schema(type=openapi.TYPE_INTEGER),
+        },
         operation_description = "Método de atualizar os dados de um professor",
         operation_summary="Atualiza os dados de um professor",
         responses = {200: openapi.Response('Sucess'),400: openapi.Response('Bad Request'),401: openapi.Response('Unauthorized'),500: openapi.Response('Server error')}
