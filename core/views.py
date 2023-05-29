@@ -81,7 +81,7 @@ class AlunoviewSet(viewsets.ModelViewSet):
         responses = {200: openapi.Response('Sucess'),400: openapi.Response('Bad Request'),401: openapi.Response('Unauthorized'),500: openapi.Response('Server error')}
     )
     def partial_update(self, request, *args, **kwargs):
-        '''Atualizando os dados de um aluno'''
+        '''Atualizando os dados de um aluno parcialmente'''
         return super().partial_update(request, *args, **kwargs)
     
 class ProfessorViewSet(viewsets.ModelViewSet):
@@ -153,7 +153,7 @@ class ProfessorViewSet(viewsets.ModelViewSet):
         responses = {200: openapi.Response('Sucess'),400: openapi.Response('Bad Request'),401: openapi.Response('Unauthorized'),500: openapi.Response('Server error')}
     )
     def partial_update(self, request, *args, **kwargs):
-        '''Atualizando parcialmente os dados de um professor'''
+        '''Atualizando os dados de um professor parcialmente'''
         return super().partial_update(request, *args, **kwargs)
     
     
@@ -224,7 +224,7 @@ class DisciplinaViewSet(viewsets.ModelViewSet):
         responses = {200: openapi.Response('Sucess'),400: openapi.Response('Bad Request'),401: openapi.Response('Unauthorized'),500: openapi.Response('Server error')}
     )
     def partial_update(self, request, *args, **kwargs):
-        '''Atualizando os dados de uma disciplina'''
+        '''Atualizando os dados de uma disciplina parcialmente'''
         return super().partial_update(request, *args, **kwargs)
     
 
@@ -292,6 +292,6 @@ class CursoViewSet(viewsets.ModelViewSet):
         responses = {200: openapi.Response('Sucess'),400: openapi.Response('Bad Request'),401: openapi.Response('Unauthorized'),500: openapi.Response('Server error')}
     )
     def partial_update(self, request, *args, **kwargs):
-        '''Atualizando parcialmente os dados de um curso'''
+        '''Atualizando os dados de um curso parcialmente'''
         return super().partial_update(request, *args, **kwargs)
     
